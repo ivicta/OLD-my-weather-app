@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/bb887e8422.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <form id="search-form">
+          <div class="card card-search">
+            <div class="card-body">
+              <h5 class="card-title">how's the weather in...</h5>
+              <div class="input-group mb-3">
+                <input
+                  id="search-input"
+                  type="text"
+                  class="form-control"
+                  placeholder="City Name"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-outline-info"
+                  type="button"
+                  id="button-addon2"
+                >
+                  <i class="fas fa-search-location search-icon"></i>
+                </button>
+                <button
+                  class="btn btn-outline-info"
+                  id="current-location-button"
+                >
+                  <i class="fas fa-location-arrow"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </header>
+      <br />
+      <div class="row">
+        <div class="col-7">
+          <div class="card card-city">
+            <div class="card-body">
+              <h5 class="card-title city-name" id="cityName">
+                and the city is...
+              </h5>
+              <div id="timer"></div>
+              <div class="temperature" id="temperature">19</div>
+              <div class="units">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </div>
+              <img src="media/sunny.svg" alt="sunny" />
+              <p class="additional-information">
+                <span id="weather-description">Clear</span>
+                <br />
+                Wind: <span id="wind-speed"></span>km/h
+                <br />
+                Humidity: <span id="humidity-value"></span>%
+              </p>
+              <!-- <p class="weather-message"></p> insert message -->
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="card card-days">
+            <div class="card-body">
+              <p class="days">
+                monday
+                <br />
+                <i class="fas fa-sun"></i>
+                <br />
+                tuesday
+                <br />
+                <i class="fas fa-cloud-sun"></i>
+                <br />
+                wednesday
+                <br />
+                <i class="fas fa-cloud-sun"></i>
+                <br />
+                thursday
+                <br />
+                <i class="fas fa-cloud-rain"></i>
+                <br />
+                friday
+                <br />
+                <i class="fas fa-cloud-rain"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
